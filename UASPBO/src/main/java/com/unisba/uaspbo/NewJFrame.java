@@ -4,6 +4,8 @@
  */
 package javaapplication1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Verel
@@ -535,8 +537,18 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-           
+              // TODO add your handling code here:
+        //hitung diskon
+        int total=0;
+        if (Integer.valueOf(jTextField4.getText()) > 50) {
+            total = Integer.valueOf(jTextField1.getText()) * Integer.valueOf(jTextField4.getText());
+            jTextField7.setText(String.valueOf(total * 1/100));
+            jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) - total*1/100));
+        }else{
+            jTextField7.setText(String.valueOf(total));
+            jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) * Integer.valueOf(jTextField4.getText())));
+        } 
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
