@@ -553,20 +553,20 @@ public class NewJFrame extends javax.swing.JFrame {
         if (Integer.valueOf(jTextField5.getText()) > 50) {
             total2 = Integer.valueOf(jTextField2.getText()) * Integer.valueOf(jTextField5.getText());
             jTextField8.setText(String.valueOf(total2 * 1/100));
-            jTextField11.setText(String.valueOf(Integer.valueOf(jTextField2.getText()) - total2*1/100));
+            jTextField11.setText(String.valueOf(total - Integer.valueOf(jTextField8.getText())));
         }else{
             jTextField8.setText(String.valueOf(total2));
-            jTextField11.setText(String.valueOf(Integer.valueOf(jTextField2.getText()) * Integer.valueOf(jTextField4.getText())));
+            jTextField11.setText(String.valueOf(total - Integer.valueOf(jTextField8.getText())));
         }
         
          int total3=0;
         if (Integer.valueOf(jTextField6.getText()) > 50) {
             total3 = Integer.valueOf(jTextField3.getText()) * Integer.valueOf(jTextField6.getText());
             jTextField9.setText(String.valueOf(total3 * 1/100));
-            jTextField12.setText(String.valueOf(Integer.valueOf(jTextField3.getText()) - total3*1/100));
+            jTextField12.setText(String.valueOf(total - Integer.valueOf(jTextField8.getText())));
         }else{
             jTextField9.setText(String.valueOf(total3));
-            jTextField12.setText(String.valueOf(Integer.valueOf(jTextField5.getText()) * Integer.valueOf(jTextField6.getText())));
+            jTextField12.setText(String.valueOf(Integer.valueOf(total - Integer.valueOf(jTextField8.getText()))));
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed
