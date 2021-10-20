@@ -546,7 +546,7 @@ public class NewJFrame extends javax.swing.JFrame {
             jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) - total*1/100));
         }else{
             jTextField7.setText(String.valueOf(total));
-            jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) * Integer.valueOf(jTextField4.getText())));
+            jTextField10.setText(String.valueOf(total - Integer.valueOf(jTextField7.getText())));
         } 
         
          int total2=0;
@@ -559,7 +559,15 @@ public class NewJFrame extends javax.swing.JFrame {
             jTextField11.setText(String.valueOf(Integer.valueOf(jTextField2.getText()) * Integer.valueOf(jTextField4.getText())));
         }
         
-    
+         int total3=0;
+        if (Integer.valueOf(jTextField6.getText()) > 50) {
+            total3 = Integer.valueOf(jTextField3.getText()) * Integer.valueOf(jTextField6.getText());
+            jTextField9.setText(String.valueOf(total3 * 1/100));
+            jTextField12.setText(String.valueOf(Integer.valueOf(jTextField3.getText()) - total3*1/100));
+        }else{
+            jTextField9.setText(String.valueOf(total3));
+            jTextField12.setText(String.valueOf(Integer.valueOf(jTextField5.getText()) * Integer.valueOf(jTextField6.getText())));
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
