@@ -543,7 +543,7 @@ public class NewJFrame extends javax.swing.JFrame {
         if (Integer.valueOf(jTextField4.getText()) > 50) {
             total = Integer.valueOf(jTextField1.getText()) * Integer.valueOf(jTextField4.getText());
             jTextField7.setText(String.valueOf(total * 1/100));
-            jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) - total*1/100));
+            jTextField10.setText(String.valueOf(total - Integer.valueOf(jTextField7.getText())));
         }else{
             jTextField7.setText(String.valueOf(total));
             jTextField10.setText(String.valueOf(total - Integer.valueOf(jTextField7.getText())));
