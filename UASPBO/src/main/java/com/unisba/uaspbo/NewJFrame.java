@@ -509,6 +509,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField14ActionPerformed
 
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
@@ -536,8 +537,41 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void clear() {
+        jRadioButton1.setSelected(false);
+        jRadioButton2.setSelected(false);
+        jRadioButton3.setSelected(false);
+        
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField15.setText("");
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
               // TODO add your handling code here:
+        int item1=0, item2=0, item3=0;
+              try {
+            item1 = Integer.valueOf(jTextField4.getText());
+            item2 = Integer.valueOf(jTextField5.getText());
+            item3 = Integer.valueOf(jTextField6.getText());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Inputan salah");
+            clear();
+        }
+      
+              
         //hitung diskon
         int total=0;
         if (Integer.valueOf(jTextField4.getText()) > 50) {
@@ -546,7 +580,7 @@ public class NewJFrame extends javax.swing.JFrame {
             jTextField10.setText(String.valueOf(total - Integer.valueOf(jTextField7.getText())));
         }else{
             jTextField7.setText(String.valueOf(total));
-            jTextField10.setText(String.valueOf(total - Integer.valueOf(jTextField7.getText())));
+            jTextField10.setText(String.valueOf(Integer.valueOf(jTextField1.getText()) * Integer.valueOf(jTextField4.getText())));
         } 
         
          int total2=0;
@@ -556,7 +590,7 @@ public class NewJFrame extends javax.swing.JFrame {
             jTextField11.setText(String.valueOf(total - Integer.valueOf(jTextField8.getText())));
         }else{
             jTextField8.setText(String.valueOf(total2));
-            jTextField11.setText(String.valueOf(total - Integer.valueOf(jTextField8.getText())));
+            jTextField11.setText(String.valueOf(Integer.valueOf(jTextField2.getText()) * Integer.valueOf(jTextField5.getText())));
         }
         
          int total3=0;
@@ -566,9 +600,21 @@ public class NewJFrame extends javax.swing.JFrame {
             jTextField12.setText(String.valueOf(total - Integer.valueOf(jTextField9 .getText())));
         }else{
             jTextField9.setText(String.valueOf(total3));
-            jTextField12.setText(String.valueOf(Integer.valueOf(total - Integer.valueOf(jTextField9.getText()))));
+            jTextField12.setText(String.valueOf(Integer.valueOf(jTextField3.getText()) * Integer.valueOf(jTextField6.getText())));
         }
         
+        
+        //TOTAL BAYAR
+        int number = Integer.valueOf(jTextField10.getText()) + Integer.valueOf(jTextField11.getText()) + Integer.valueOf(jTextField12.getText());
+        jTextField14.setText(String.valueOf(number));
+        
+        //DISKON 1JT
+        if (number > 1000000) {
+            int diskon1jt = number *5/100;
+            jTextField15.setText(String.valueOf(diskon1jt));
+        }else{
+            jTextField15.setText("0");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
